@@ -8,6 +8,15 @@
     <title>Eliminar Tarea</title>
 
 </head>
+<style>
+    * {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    body {
+        background-color: rgb(247, 245, 152);
+    }
+</style>
 
 <body class="bg-gray-100">
     <div class="container mx-auto mt-5 p-4 bg-white rounded shadow">
@@ -15,8 +24,7 @@
         <form method="post">
             {% csrf_token %}
             <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Eliminar</button>
-            <a href="{% url 'task-list' %}"
-                class="bg-gray-300 text-gray-700 px-4 py-2 rounded ml-2 hover-gray-400">Cancelar</a>
+            <a href="{% url 'task-list' %}" class="bg-gray-300 text-gray-700 px-4 py-2 rounded ml-2 hover-gray-400">Cancelar</a>
         </form>
     </div>
 </body>

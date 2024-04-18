@@ -13,25 +13,24 @@
     }
 
     body {
-        background-color: whitesmoke;
+        background-color: rgb(238, 237, 199);
     }
 </style>
 
 <body>
     <div class="max-w-lg mx-auto p-5 bg-white shadow-xl mt-10 rounded">
-        <h1 class="text-2xl font-bold mb-4 text-blue-500">Editar Tarea</h1>
+        <a href="{% url 'task-list' %}" class="text-bold font-semibold text-blue-500 hover:text-blue-600">←
+            Volver
+            a la lista de tareas</a>
+        <h1 class="text-2xl font-bold mb-4 text-blue-500 p-5">Editar Tarea</h1>
         <form method="post" class="space-y-3">
             {% csrf_token %}
-
             <div class="mb-4">
-                <label for="title" class="block text-blue-500 font-semibold mb-2">Título</label>
-                <input type="text" id="title" name="title" placeholder="Título de la tarea"
-                    class="border border-gray-300 rounded-md shadow-sm w-full p-2">
+                <label for="title" class="block text-blue-500 font-semibold mb-2">Título</label> {{ form.title }}
             </div>
             <div class="mb-6">
                 <label for="description" class="block text-blue-500 font-semibold mb-2">Descripción</label>
-                <textarea id="description" name="description" placeholder="Descripción de la tarea" rows="4"
-                    class="border border-gray-300 rounded-md shadow-sm w-full p-2"></textarea>
+                {{form.description }}
             </div>
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Actualizar
