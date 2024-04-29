@@ -11,11 +11,15 @@
     body {
         background-color: rgb(186, 239, 160);
     }
+
+    .container {
+        background-color: #e8e8e8;
+    }
 </style>
 
 
 <div class="container mx-auto mt-10">
-    <div class="bg-gray-200 p-8 rounded-md shadow-2xl">
+    <div class="bg-custom-white p-8 rounded-md shadow-2xl">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-xl font-bold text-blue-600 font-serif">Lista de Tareas</h1>
             <a href="{% url 'create-task' %}"
@@ -24,8 +28,8 @@
             </a>
         </div>
         <table class="min-w-full table-auto bg-gray-190">
-            <thead class="bg-gray-100">
-                <tr>
+            <thead class="bg-gray-200">
+                <tr class="container">
                     <th class="py-2 px-6 text-base text-blue-600 font-serif divide-gray-300 bg-gray-200">
                         Tarea
                     </th>

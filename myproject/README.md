@@ -1,23 +1,47 @@
-# Proyecto de Lista de Tareas
+# 📋 Proyecto Integrador - To Do App Django
 
-Este proyecto es un To Do simple para gestionar una lista de tareas. Permite a los usuarios crear, editar y eliminar tareas pendientes.
+## 📖 Descripción
+Esta aplicación web de lista de tareas está construida con Django 🐍 y permite a los usuarios gestionar sus tareas diarias. Los usuarios pueden crear ✏️, visualizar 👀, editar 📝 y eliminar ❌ tareas, todo dentro de una interfaz intuitiva y segura 🔒.
 
-## Características
+## 🚀 Cómo empezar
 
-- Crear tareas nuevas
-- Editar tareas existentes
-- Eliminar tareas
-- Interfaz de usuario responsiva con Tailwind CSS
+### 🔧 Requisitos previos
+- Python 3.12 🐍
+- pip 📦 (Python package installer)
 
-## Tecnologías Utilizadas
+### 🛠 Configuración del entorno
+Para ejecutar este proyecto, instala las dependencias en un entorno virtual:
 
-- Django: Un framework de alto nivel para el desarrollo web rápido.
-- Tailwind CSS: Un framework de CSS para diseño de interfaces de usuario.
+```bash
+python -m venv myenv
+source myenv/bin/activate # En Windows use `myenv\Scripts\activate`
+pip install -r requirements.txt
 
-## Instalación
 
-Para configurar el proyecto localmente, sigue estos pasos:
+🗃 Configuración de la base de datos
 
-1. Clona el repositorio:
+Realiza las migraciones necesarias para configurar la base de datos:
+python manage.py makemigrations
+python manage.py migrate
 
- 
+
+👤 Creación de un superusuario
+Crea un superusuario para acceder al panel de administración de Django:
+bash
+python manage.py createsuperuser
+
+🌐 Ejecución del servidor de desarrollo
+
+Para iniciar el servidor de desarrollo, ejecuta:
+
+bash
+
+python manage.py runserver
+
+http://127.0.0.1:8000/task/list 
+
+📂 Estructura del proyecto
+
+    task/: Aplicación Django que contiene el modelo Task y vistas para CRUD.
+    templates/: Contiene archivos HTML para el sistema de templates de Django.
+    manage.py: Script de utilidad para administrar el proyecto Django.

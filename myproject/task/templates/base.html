@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+    <title>{% block title %}Mi To Do{% endblock %}</title>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -52,11 +52,11 @@
 
                     {% else %}
                     <li>
-                        <a class="text-white px-3 py-2 rounded hover:bg-gray-700" href="{% url 'login' %}">Iniciar
+                        <a class="text-white px-3 py-2 rounded hover:bg-green-400" href="{% url 'login' %}">Iniciar
                             Sesión</a>
                     </li>
                     <li>
-                        <a class="text-white px-3 py-2 rounded hover:bg-gray-700"
+                        <a class="text-white px-3 py-2 rounded hover:bg-green-400"
                             href="{% url 'signup' %}">Registrarse</a>
                     </li>
                     {% endif %}
@@ -69,7 +69,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-gray-800 text-white mt-24 py-3">
+    <footer class="bg-green-700 text-white mt-24 py-3">
         <div class="text-center">
             <p class="mb-0 ">© {% now "Y" %} Mi Proyecto</p>
         </div>
