@@ -1,0 +1,24 @@
+<!-- task/templates/login/profile.html -->
+
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+<div class="container mx-auto p-5 bg-white shadow-xl mt-10 rounded">
+    <h2 class="text-2xl font-bold mb-4 text-blue-500">Editar Perfil</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-4">
+            {{ u_form|crispy }}
+        </div>
+        <div class="mb-4">
+            {{ p_form|crispy }}
+        </div>
+        <div class="mb-4">
+            {% if user.profile.profile_image %}
+            <img src="{{ user.profile.profile_image.url }}" alt="Imagen de perfil" class="rounded-full w-32 h-32">
+            <! -- -->{% endif %}
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Actualizar
+        </button>
+    </form>
+</div>
+{% endblock %}
