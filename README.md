@@ -1,3 +1,4 @@
+markdown
 
 ## Authors
 
@@ -22,17 +23,21 @@ python -m venv myenv
 source myenv/bin/activate # En Windows use `myenv\Scripts\activate`
 pip install -r requirements.txt
 
-
 🗃 Configuración de la base de datos
 
 Realiza las migraciones necesarias para configurar la base de datos:
+
+bash
+
 python manage.py makemigrations
 python manage.py migrate
 
-
 👤 Creación de un superusuario
+
 Crea un superusuario para acceder al panel de administración de Django:
+
 bash
+
 python manage.py createsuperuser
 
 🌐 Ejecución del servidor de desarrollo
@@ -43,39 +48,29 @@ bash
 
 python manage.py runserver
 
-http://127.0.0.1:8000/task/list 
-
+El servidor estará disponible en: http://127.0.0.1:8000/task/list
 📂 Estructura del proyecto
 
     task/: Aplicación Django que contiene el modelo Task y vistas para CRUD.
     templates/: Contiene archivos HTML para el sistema de templates de Django.
-    manage.py: Script de utilidad para administrar el proyecto Django.## Color Reference
+    manage.py: Script de utilidad para administrar el proyecto Django.
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
+🌈 Referencia de Colores
+Color	Hex
+Ejemplo Color 1	#0a192f #0a192f
+Ejemplo Color 2	#f8f8f8 #f8f8f8
+Ejemplo Color 3	#00b48a #00b48a
+Ejemplo Color 4	#00d1a0 #00d1a0
+🚀 Sobre Mí
 
+Soy un desarrollador full stack apasionado por la tecnología y la música. Toco la guitarra en mi tiempo libre y actualmente soy estudiante de Protalento.
+⚡️ Dato Curioso
 
-## 🚀 About Me
-I'm a full stack developer...
+¡Me apasiona la música y toco la guitarra en mi tiempo libre!
+🎓 Educación
 
+Soy estudiante de Protalento.
+📜 Licencia
 
-# Proyecto de Descarga y Procesamiento de Datos
-
-Este proyecto consta de un script de Python que descarga datos de un recurso en línea utilizando la biblioteca requests, y luego procesa estos datos para realizar ciertas operaciones.
-
-
-⚡️ Dato curioso... ¡Me apasiona la música y toco la guitarra en mi tiempo libre!
-
-🎓 Soy estudiante de Protalento.
- 
-
- 
- 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+ [MIT](https://choosealicense.com/licenses/mit/)
 
